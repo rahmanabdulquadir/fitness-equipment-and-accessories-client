@@ -1,9 +1,12 @@
+import Banner from "../components/ui/home/Banner";
+import Categories from "../components/ui/home/Categories";
 
 
 const HomePage = () => {
   return (
     <div>
-      This is home page
+     <Banner/>
+     <Categories/>
     </div>
   );
 };
