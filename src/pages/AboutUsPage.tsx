@@ -1,9 +1,10 @@
+import Hero from "../components/ui/about/Hero";
 
 
 const AboutUsPage = () => {
   return (
     <div className="h-screen">
-      This is about us page
+      <Hero/>
     </div>
   );
 };
