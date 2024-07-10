@@ -1,4 +1,4 @@
-export type TProduct = {
+export interface TProduct {
   _id: string;
   name: string;
   price: number;
@@ -6,7 +6,7 @@ export type TProduct = {
   category: string;
   stock: number;
   image: string;
-};
+}
 
 export type TCategoryInitialState = {
   category: string | null;
@@ -17,7 +17,6 @@ export type TFiltersInitialState = {
   categories: string[];
   sort: string | null;
 };
-
 
 interface ICartItem extends TProduct {
   quantity: number;

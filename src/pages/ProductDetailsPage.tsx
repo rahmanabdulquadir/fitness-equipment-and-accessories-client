@@ -31,7 +31,7 @@ const ProductDetailsPage = () => {
     if (!isProductOutOfStock) {
       dispatch(setToCart(product));
       await updateProduct({ id: id, stock: product.stock - 1 });
-      toast.success("Successfully added cart!");
+      toast.success("Successfully added to cart!");
     }
   };
 
