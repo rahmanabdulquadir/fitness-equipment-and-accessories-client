@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 const ContactInfo = () => {
 
   const [feedback, setFeedback] = useState('');
 
-  const handleFeedbackChange = (event) => {
+  const handleFeedbackChange = (event: FormEvent) => {
     setFeedback(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     // Handle the form submission logic here
     alert('Thank you for your feedback!');
@@ -38,7 +38,7 @@ const ContactInfo = () => {
         <div className="mb-4">
           <textarea
             className="w-full p-4 rounded-lg shadow-inner border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            rows="5"
+            // rows="5"
             placeholder="Your feedback..."
             value={feedback}
             onChange={handleFeedbackChange}

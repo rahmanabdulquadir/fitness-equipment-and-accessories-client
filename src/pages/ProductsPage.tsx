@@ -1,3 +1,10 @@
+import Hero from "../components/ui/about/Hero";
+import ErrorPage from "../components/ui/global/ErrorPage";
+import ProgressBar from "../components/ui/global/ProgressBar";
+import Category from "../components/ui/Products/Catergory";
+import ClearFilterButton from "../components/ui/Products/ClearFilterButton";
+import SearchBar from "../components/ui/Products/SearchBar";
+import Sorting from "../components/ui/Products/Sorting";
 import { useGetProductsQuery } from "../redux/api/baseApi";
 import { clearCategory } from "../redux/features/category/categorySlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
@@ -6,32 +13,62 @@ import { TProduct } from "../types";
 
 const ProductsPage = () => {
   const dispatch = useAppDispatch();
+  // grab category name from local state
   const selectedCategory = useAppSelector(
     (state: RootState) => state.category.category
   );
+
+  // grab filtering value from local state
+  const { searchTerm, sort, categories } = useAppSelector(
+    (state: RootState) => state.filters
+  );
+  //fetching data
   const {
     data: products,
     error,
     isLoading,
-  } = useGetProductsQuery(selectedCategory);
-  console.log(selectedCategory);
-
+  } = useGetProductsQuery({
+    category: selectedCategory,
+    searchTerm,
+    sort,
+    categories,
+  });
+  // reset filters
   const handleFilterReset = () => {
     dispatch(clearCategory());
   };
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading products</div>;
+  //if state is loading return loading page
+  if (isLoading) {
+    return (
+      <div className="h-full flex justify-center items-center">
+        <p>Loading...</p>
+        <ProgressBar></ProgressBar>
+      </div>
+    );
+  }
+  //if state is error return error page
+  if (error) {
+    return (
+      <div className="h-full flex justify-center items-center">
+        <ErrorPage></ErrorPage>
+      </div>
+    );
+  }
 
   return (
     <>
-      <div>
-        <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5">
-          <div className="">
-            <h1 className="text-5xl font-bold">P r o d u c t s</h1>
-            <p className="font-semibold">Home / Products</p>
-          </div>
+    <Hero title={'P R O D U C T S'} locationFrom={'Home / products'}/>
+      <div className="mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+          <SearchBar></SearchBar>
+          {/* category */}
+          <Category></Category>
+          {/* sorting */}
+          <Sorting></Sorting>
+          {/* clear button */}
+          <ClearFilterButton></ClearFilterButton>
         </div>
+        <h1 className="text-2xl font-bold mb-4">Products</h1>
         {selectedCategory && (
           <div className="mb-4">
             <span className="mr-2">Category: {selectedCategory}</span>

@@ -1,14 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { useGetProductsQuery } from "../../../redux/api/baseApi";
+
 import { useAppDispatch } from "../../../redux/hooks";
 import { selectCategory } from "../../../redux/features/category/categorySlice";
-import { categories } from "../../../utils/categories";
+import { categoriesArr } from "../../../utils/categoriesArr";
+
 // import { getUniqueCategoriesByName } from "../../../utils/getUniqueCategories";
 
 const Categories = () => {
-  const { data: products, isLoading, error } = useGetProductsQuery(undefined);
-  console.log(products?.data);
-
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
@@ -16,16 +14,13 @@ const Categories = () => {
     navigate("/products"), dispatch(selectCategory(category));
   };
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading categories</div>;
-
   // const categories = products ? getUniqueCategoriesByName(products?.data) : [];
 
   return (
     <div className="my-8">
       <h2 className="text-2xl font-bold mb-4">Categories</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {categories?.map((category, index) => (
+        {categoriesArr?.map((category, index) => (
           <div
             key={index}
             className="cursor-pointer border p-4"

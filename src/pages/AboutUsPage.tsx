@@ -7,7 +7,7 @@ import Testimonial from "../components/ui/about/Testimonial";
 const AboutUsPage = () => {
   return (
     <div className="">
-      <Hero />
+      <Hero title={"About Us"} locationFrom={'Home / About Us'}/>
       <AboutUsIntro/>
       <Team/>
       <Testimonial/>
