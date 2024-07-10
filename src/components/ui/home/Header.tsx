@@ -101,7 +101,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="navbar bg-pink-500 sticky top-0 z-40">
+    <div className="navbar bg-white sticky top-0 z-40 drop-shadow-md">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -139,11 +139,11 @@ const Header = () => {
                 <NavLink to="/products/management">Management</NavLink>
               </a>
             </li>
-            <li>
+            {/* <li>
               <a>
                 <NavLink to="/products/details">Details</NavLink>
               </a>
-            </li>
+            </li> */}
             <li>
               <a>
                 <NavLink to="/products/cart">Cart</NavLink>
@@ -185,11 +185,11 @@ const Header = () => {
               <NavLink to="/products/management">Management</NavLink>
             </a>
           </li>
-          <li>
+          {/* <li>
             <a>
               <NavLink to="/products/details">Details</NavLink>
             </a>
-          </li>
+          </li> */}
           <li>
             <a>
               <NavLink to="/products/cart">Cart</NavLink>

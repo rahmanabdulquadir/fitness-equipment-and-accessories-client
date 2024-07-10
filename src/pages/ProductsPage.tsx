@@ -4,8 +4,6 @@ import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { RootState } from "../redux/store";
 import { TProduct } from "../types";
 
-
-
 const ProductsPage = () => {
   const dispatch = useAppDispatch();
   const selectedCategory = useAppSelector(
@@ -28,7 +26,12 @@ const ProductsPage = () => {
   return (
     <>
       <div>
-        <h1 className="text-2xl font-bold mb-4">Products</h1>
+        <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5">
+          <div className="">
+            <h1 className="text-5xl font-bold">P r o d u c t s</h1>
+            <p className="font-semibold">Home / Products</p>
+          </div>
+        </div>
         {selectedCategory && (
           <div className="mb-4">
             <span className="mr-2">Category: {selectedCategory}</span>
@@ -57,4 +60,3 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
-
