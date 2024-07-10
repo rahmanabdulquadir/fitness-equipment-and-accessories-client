@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,20 +54,41 @@ const Banner = () => {
     //   </div>
     // </div>
 
-    <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?fitness,gym')" }}>
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-black to-blue-900 opacity-70"></div>
-    <div className="relative container mx-auto p-6 flex flex-col justify-center items-center h-full text-center text-white">
-      <h1 className={`text-5xl md:text-7xl font-bold mb-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100 animate-bounce' : 'opacity-0'}`}>
-        Welcome to FitFlex
-      </h1>
-      <p className={`text-xl md:text-2xl mb-8 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        Your Ultimate Destination for Fitness Equipment and Accessories
-      </p>
-      <button className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-110 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        Shop Now
-      </button>
+    <div
+      className="relative bg-cover bg-center h-screen"
+      style={{
+        backgroundImage:
+          "url('https://source.unsplash.com/1600x900/?fitness,gym')",
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-black to-blue-900 opacity-70"></div>
+      <div className="relative container mx-auto p-6 flex flex-col justify-center items-center h-full text-center text-white">
+        <h1
+          className={`text-5xl md:text-7xl font-bold mb-4 transition-opacity duration-1000 ${
+            isVisible ? "opacity-100 animate-bounce" : "opacity-0"
+          }`}
+        >
+          Welcome to FitFlex
+        </h1>
+        <p
+          className={`text-xl md:text-2xl mb-8 transition-opacity duration-1000 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          Your Ultimate Destination for Fitness Equipment and Accessories
+        </p>
+
+        <NavLink to={"/products"}>
+          <button
+            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-110 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            Shop Now
+          </button>
+        </NavLink>
+      </div>
     </div>
-  </div>
   );
 };
 

@@ -17,3 +17,12 @@ export type TFiltersInitialState = {
   categories: string[];
   sort: string | null;
 };
+
+
+interface ICartItem extends TProduct {
+  quantity: number;
+}
+
+export type TCartInitialState = {
+  items: ICartItem[];
+};

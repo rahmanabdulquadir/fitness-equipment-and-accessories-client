@@ -29,7 +29,7 @@ const Benefits = () => {
   return (
     <>
       <div className="my-8">
-        <h2 className="text-2xl font-bold text-center mb-8">Why Choose Us</h2>
+      <h2 className="text-3xl text-center font-bold mb-10 italic mt-16">Benefits of out product</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefitsData.map((benefit, index) => (
             <div key={index} className="text-center border p-4 rounded-lg">

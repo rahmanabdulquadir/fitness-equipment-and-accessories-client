@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Hero from "../components/ui/about/Hero";
 import ErrorPage from "../components/ui/global/ErrorPage";
 import ProgressBar from "../components/ui/global/ProgressBar";
@@ -13,6 +14,7 @@ import { TProduct } from "../types";
 
 const ProductsPage = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   // grab category name from local state
   const selectedCategory = useAppSelector(
     (state: RootState) => state.category.category
@@ -36,6 +38,10 @@ const ProductsPage = () => {
   // reset filters
   const handleFilterReset = () => {
     dispatch(clearCategory());
+  };
+
+  const handleViewDetails = (id: string) => {
+    navigate(`/products/details/${id}`);
   };
   //if state is loading return loading page
   if (isLoading) {
@@ -79,16 +85,33 @@ const ProductsPage = () => {
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products?.data?.map((product: TProduct) => (
-            <div key={product._id} className="border p-4">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 object-cover mb-4"
-              />
-              <h2 className="text-xl">{product.name}</h2>
-              <p>Price: ${product.price}</p>
-              <button className="btn btn-primary mt-2">View Details</button>
-            </div>
+            // <div key={product._id} className="border p-4">
+            //   <img
+            //     src={product.image}
+            //     alt={product.name}
+            //     className="w-full h-48 object-cover mb-4"
+            //   />
+            //   <h2 className="text-xl">{product.name}</h2>
+            //   <p>Price: ${product.price}</p>
+            //   <button className="btn btn-primary mt-2">View Details</button>
+            // </div>
+
+            <div className="w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+      <img
+        className="w-full h-48 object-cover object-center"
+        src={product.image}
+        alt={product.name}
+      />
+      <div className="p-4">
+        <h3 className="font-semibold text-gray-800 text-lg mb-2">{product.name}</h3>
+        <p className="text-gray-600">${product.price}</p>
+        <div className="mt-3 flex justify-center">
+          <button onClick={() => handleViewDetails(product._id)} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
           ))}
         </div>
       </div>
