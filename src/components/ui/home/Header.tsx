@@ -3,7 +3,7 @@ import { navLinks } from "../../../utils/navLinks";
 
 const Header = () => {
   return (
-    <div className="navbar bg-white shadow-lg p-4 sticky top-0 z-20">
+    <div className="navbar bg-white shadow-sm p-6 sticky top-0 z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

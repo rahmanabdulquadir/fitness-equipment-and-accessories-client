@@ -17,10 +17,17 @@ const Categories = () => {
   // const categories = products ? getUniqueCategoriesByName(products?.data) : [];
 
   return (
-    <div className="w-11/12 mx-auto">
-      <h2 className="text-3xl text-center font-bold mb-10 italic mt-16">
+    <div className="w-11/12 mx-auto lg:h-[500px]">
+      <h2 className="text-5xl text-center font-bold mb-6 russo-one-regular text-gray-700 mt-16">
         Categories
       </h2>
+      <p className="text-gray-600 text-lg  md:text-xl lg:text-2xl mb-12 text-center ">
+        Discover our diverse range of premium products at FitFlex Essentials.
+        Explore top-quality gym equipment for strength training, cutting-edge
+        cardio equipment for endurance, and essential gym accessories to enhance
+        your workout experience. Elevate your fitness journey with our expertly
+        curated categories designed to meet all your fitness needs.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {categoriesArr?.map((category, index) => (
           <div
@@ -36,7 +43,7 @@ const Categories = () => {
                 alt={category.name}
               />
             </div>
-            <h2 className="text-center mt-2 text-semibold">{category.name}</h2>
+            <h2 className="text-center mt-2 text-gray-600 text-lg  md:text-xl lg:text-xl text-semibold">{category.name}</h2>
           </div>
         ))}
       </div>

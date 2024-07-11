@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 const EmptyCard = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center ">
+      <div className="flex flex-col items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Your Cart is Empty
@@ -11,12 +13,14 @@ const EmptyCard = () => {
             products and find something you like!
           </p>
           <div className="flex justify-center">
-            <button
-              // onClick={handleGoToProducts}
-              className="btn btn-primary text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
-            >
-              Shop Now
-            </button>
+            <NavLink to={"/products"}>
+              <button
+                // onClick={handleGoToProducts}
+                className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+              >
+                Shop Now
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

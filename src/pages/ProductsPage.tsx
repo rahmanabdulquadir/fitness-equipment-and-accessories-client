@@ -64,6 +64,12 @@ const ProductsPage = () => {
 
   return (
     <>
+      <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5 mb-10">
+        <div className="">
+          <h1 className="text-5xl font-bold">P R O D U C T S</h1>
+          <p className="font-semibold mt-3">Home / Products</p>
+        </div>
+      </div>
       <div className="mb-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
           <SearchBar></SearchBar>
@@ -74,28 +80,37 @@ const ProductsPage = () => {
           {/* clear button */}
           <ClearFilterButton></ClearFilterButton>
         </div>
-        <h1 className="text-2xl font-bold mb-4">Products</h1>
+        <h2 className="text-5xl text-center font-bold mb-10 russo-one-regular text-gray-700 mt-16">
+          FitFlex Essential Products
+        </h2>
         {selectedCategory && (
           <div className="mb-4">
             <span className="mr-2">Category: {selectedCategory}</span>
-            <button className="btn btn-secondary" onClick={handleFilterReset}>
+            <button
+              className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+              onClick={handleFilterReset}
+            >
               Clear Filter
             </button>
           </div>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-11/12 mx-auto">
           {products?.data?.map((product: TProduct) => (
-            <div key={product._id} className="border p-4">
+            <div key={product._id} className="border p-4 bg-white">
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover mb-4"
               />
-              <h2 className="text-xl">{product.name}</h2>
-              <p>Price: ${product.price}</p>
+              <h2 className="font-semibold text-gray-800 text-2xl mb-2">
+                {product.name}
+              </h2>
+              <p className="text-gray-600 text-lg  md:text-xl lg:text-xl mb-6">
+                Price: ${product.price}
+              </p>
               <button
                 onClick={() => handleViewDetails(product._id)}
-                className="btn btn-primary mt-2"
+                className="inline-block px-5 py-2 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
               >
                 View Details
               </button>

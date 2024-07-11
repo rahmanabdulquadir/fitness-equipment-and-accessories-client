@@ -3,13 +3,13 @@ const benefitsData = [
     title: "High Quality",
     description: "Our products are made with the highest quality materials.",
     image:
-      "https://media.istockphoto.com/id/625739874/photo/heavy-weight-exercise.jpg?s=2048x2048&w=is&k=20&c=1JmhC4Hf9X37bw7PqRpF7eX-0M9zQUPgYAcFCwBa_Fc=",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH28LpcMvGBljGtKzH4BbkXDpvz8dLoao3gg&s",
   },
   {
     title: "Affordable Prices",
     description: "We offer competitive prices on all our products.",
     image:
-      "https://www.shutterstock.com/image-vector/richers-help-poorers-concept-rich-600w-696551677.jpg",
+      "https://plus.unsplash.com/premium_photo-1682310152051-5d6f901b19b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWZmb3JkYWJsZSUyMFByaWNlc3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     title: "Fast Shipping",
@@ -29,10 +29,12 @@ const Benefits = () => {
   return (
     <>
       <div className="my-8">
-      <h2 className="text-3xl text-center font-bold mb-10 italic mt-16">Benefits of out product</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <h2 className="text-5xl text-center font-bold mb-6 russo-one-regular text-gray-700 mt-16">
+        Benefits of our product
+      </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
           {benefitsData.map((benefit, index) => (
-            <div key={index} className="text-center border p-4 rounded-lg">
+            <div key={index} className="text-center bg-white border p-4 rounded-lg lg:w-[500px] lg:mx-auto">
               <img
                 src={benefit.image}
                 alt={benefit.title}

@@ -7,11 +7,11 @@ const ProductCard = ({ name, image, price, handleViewDetails, _id }: any) => {
         src={image}
         alt={name}
       />
-      <div className="p-4">
-        <h3 className="font-semibold text-gray-800 text-lg mb-2">{name}</h3>
-        <p className="text-gray-600">${price}</p>
+      <div className="p-4 text-center">
+        <h3 className="font-semibold text-gray-800 text-2xl mb-2">{name}</h3>
+        <p className="text-gray-600 text-lg  md:text-xl lg:text-2xl mb-6">${price}</p>
         <div className="mt-3 flex justify-center">
-          <button onClick={() => handleViewDetails(_id)} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
+          <button onClick={() => handleViewDetails(_id)} className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
             View Details
           </button>
         </div>

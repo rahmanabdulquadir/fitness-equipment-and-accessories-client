@@ -17,9 +17,11 @@ const CartCard = ({
 }: TCartCardProps) => {
   return (
     <>
-      <div className=" p-4 my-8">
+      <div className=" p-4 my-8 h-screen">
         {!(cart.items.length === 0) ? (
-          <h1 className="text-3xl font-bold mb-4">Your Cart</h1>
+          <h2 className="text-5xl text-center font-bold mb-10 russo-one-regular text-gray-700 mt-16">
+            Your Cart 
+          </h2>
         ) : (
           ""
         )}
