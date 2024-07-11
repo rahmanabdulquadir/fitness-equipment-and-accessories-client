@@ -2,7 +2,7 @@ import MainLayout from "./components/layouts/MainLayout";
 
 function App() {
   return (
-    <div>
+    <div className="bg-gray-300">
       <MainLayout />
     </div>
   );

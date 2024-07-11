@@ -54,41 +54,70 @@ const Banner = () => {
     //   </div>
     // </div>
 
-    <div
-      className="relative bg-cover bg-center h-screen"
-      style={{
-        backgroundImage:
-          "url('https://source.unsplash.com/1600x900/?fitness,gym')",
-      }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-black to-blue-900 opacity-70"></div>
-      <div className="relative container mx-auto p-6 flex flex-col justify-center items-center h-full text-center text-white">
-        <h1
-          className={`text-5xl md:text-7xl font-bold mb-4 transition-opacity duration-1000 ${
-            isVisible ? "opacity-100 animate-bounce" : "opacity-0"
-          }`}
-        >
-          Welcome to FitFlex
-        </h1>
-        <p
-          className={`text-xl md:text-2xl mb-8 transition-opacity duration-1000 ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          Your Ultimate Destination for Fitness Equipment and Accessories
-        </p>
+    // <div
+    //   className="relative bg-cover bg-center h-screen"
+    //   style={{
+    //     backgroundImage:
+    //       "url('https://source.unsplash.com/1600x900/?fitness,gym')",
+    //   }}
+    // >
+    //   <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-black to-blue-900 opacity-70"></div>
+    //   <div className="relative container mx-auto p-6 flex flex-col justify-center items-center h-full text-center text-white">
+    //     <h1
+    //       className={`text-5xl md:text-7xl font-bold mb-4 transition-opacity duration-1000 ${
+    //         isVisible ? "opacity-100 animate-bounce" : "opacity-0"
+    //       }`}
+    //     >
+    //       Welcome to FitFlex
+    //     </h1>
+    //     <p
+    //       className={`text-xl md:text-2xl mb-8 transition-opacity duration-1000 ${
+    //         isVisible ? "opacity-100" : "opacity-0"
+    //       }`}
+    //     >
+    //       Your Ultimate Destination for Fitness Equipment and Accessories
+    //     </p>
 
-        <NavLink to={"/products"}>
-          <button
-            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-110 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
+    //     <NavLink to={"/products"}>
+    //       <button
+    //         className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-110 ${
+    //           isVisible ? "opacity-100" : "opacity-0"
+    //         }`}
+    //       >
+    //         Shop Now
+    //       </button>
+    //     </NavLink>
+    //   </div>
+    // </div>
+
+    <div className="relative bg-gray-300 text-white overflow-hidden">
+    <div className="container mx-auto px-6 py-16 md:py-24 lg:py-32 relative z-10">
+      <div className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="lg:w-1/2">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Welcome to FitFlex Essentials
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl mb-8">
+            Your one-stop shop for premium gym equipment and accessories. Elevate your fitness journey with our top-quality products.
+          </p>
+          <a
+            href="/products"
+            className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
           >
             Shop Now
-          </button>
-        </NavLink>
+          </a>
+        </div>
+        <div className="lg:w-1/2 mt-10 lg:mt-0">
+          <img
+            className="w-full h-auto object-cover rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105 z-10"
+            src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxOTY2MTc1fHxlbnwwfHx8fHw%3D" // Replace with your image URL
+            alt="FitFlex Gym Equipment"
+          />
+        </div>
       </div>
     </div>
+    <div className="absolute inset-0 z-0 bg-cover bg-center opacity-50 " ></div> {/* Background image */}
+  </div>
   );
 };
 

@@ -1,227 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../../utils/navLinks";
 
-// const Header = () => {
-//   return (
-//     <div className="navbar bg-pink-500 sticky top-0 z-40">
-//       <div className="navbar-start flex justify-around">
-//         <div className="dropdown   ">
-//           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               className="h-5 w-5"
-//               fill="none"
-//               viewBox="0 0 24 24"
-//               stroke="currentColor"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d="M4 6h16M4 12h8m-8 6h16"
-//               />
-//             </svg>
-//           </div>
-//           <ul
-//             tabIndex={0}
-//             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-//           >
-//             <li>
-//               <a>
-//                 <NavLink to={"/"}>Home</NavLink>
-//               </a>
-//             </li>
-//             <li>
-//               <a>
-//                 <NavLink to={"/about"}>About</NavLink>
-//               </a>
-//             </li>
-//             <li>
-//               <a>Products</a>
-//               <ul className="p-2">
-//                 <li>
-//                   <a>Submenu 1</a>
-//                 </li>
-//                 <li>
-//                   <a>Submenu 2</a>
-//                 </li>
-//               </ul>
-//             </li>
-//             <li>
-//               <a>
-//                 <NavLink to={"/cart"}>Cart</NavLink>
-//               </a>
-//             </li>
-//           </ul>
-//         </div>
-//         <div>
-//           <a className="btn btn-ghost text-xl">FitFlex Essentials</a>
-//         </div>
-//       </div>
-//       <div className="navbar-center hidden lg:flex ">
-//         <ul className="menu menu-horizontal px-1">
-//           <li>
-//             <a>
-//               <NavLink to={"/"}>Home</NavLink>
-//             </a>
-//           </li>
-//           <li>
-//             <a>
-//               <NavLink to={"/about"}>About</NavLink>
-//             </a>
-//           </li>
-//           <li>
-//             <details>
-//               <summary>Products</summary>
-//               <ul className="p-2">
-//                 <li>
-//                   <a>Submenu 1</a>
-//                 </li>
-//                 <li>
-//                   <a>Submenu 2</a>
-//                 </li>
-//               </ul>
-//             </details>
-//           </li>
-//           <li>
-//             <a>
-//               <NavLink to={"products/cart"}>Cart</NavLink>
-//             </a>
-//           </li>
-//         </ul>
-//       </div>
-//       {/* <div className="navbar-end">
-//         <a className="btn">Button</a>
-//       </div> */}
-//     </div>
-//   );
-// };
-
-// export default Header;
-
-
 const Header = () => {
-  // return (
-  //   <div className="navbar bg-white sticky top-0 z-40 drop-shadow-md">
-  //     <div className="navbar-start">
-  //       <div className="dropdown">
-  //         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-  //           <svg
-  //             xmlns="http://www.w3.org/2000/svg"
-  //             className="h-5 w-5"
-  //             fill="none"
-  //             viewBox="0 0 24 24"
-  //             stroke="currentColor"
-  //           >
-  //             <path
-  //               strokeLinecap="round"
-  //               strokeLinejoin="round"
-  //               strokeWidth="2"
-  //               d="M4 6h16M4 12h8m-8 6h16"
-  //             />
-  //           </svg>
-  //         </div>
-  //         <ul
-  //           tabIndex={0}
-  //           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-  //         >
-  //           <li>
-  //             <a>
-  //               <NavLink to="/">Home</NavLink>
-  //             </a>
-  //           </li>
-  //           <li>
-  //             <a>
-  //               <NavLink to="/products">Products</NavLink>
-  //             </a>
-  //           </li>
-  //           <li>
-  //             <a>
-  //               <NavLink to="/products/management">Management</NavLink>
-  //             </a>
-  //           </li>
-  //           {/* <li>
-  //             <a>
-  //               <NavLink to="/products/details">Details</NavLink>
-  //             </a>
-  //           </li> */}
-  //           <li>
-  //             <a>
-  //               <NavLink to="/products/cart">Cart</NavLink>
-  //             </a>
-  //           </li>
-  //           <li>
-  //             <a>
-  //               <NavLink to="/products/checkout">Checkout</NavLink>
-  //             </a>
-  //           </li>
-  //           <li>
-  //             <a>
-  //               <NavLink to="/about">About Us</NavLink>
-  //             </a>
-  //           </li>
-  //         </ul>
-  //       </div>
-  //       <div className="flex justify-center items-center navbar-center">
-         
-  //         <a className="text-xl font-bold ml-2">
-  //           FitFlex Essentials
-  //         </a>
-  //       </div>
-  //     </div>
-  //     <div className="navbar-center hidden lg:flex navbar-end">
-  //       <ul className="menu menu-horizontal px-1">
-  //         <li>
-  //           <a>
-  //             <NavLink to="/">Home</NavLink>
-  //           </a>
-  //         </li>
-  //         <li>
-  //           <a>
-  //             <NavLink to="/products">Products</NavLink>
-  //           </a>
-  //         </li>
-  //         <li>
-  //           <a>
-  //             <NavLink to="/products/management">Management</NavLink>
-  //           </a>
-  //         </li>
-  //         {/* <li>
-  //           <a>
-  //             <NavLink to="/products/details">Details</NavLink>
-  //           </a>
-  //         </li> */}
-  //         <li>
-  //           <a>
-  //             <NavLink to="/products/cart">Cart</NavLink>
-  //           </a>
-  //         </li>
-  //         <li>
-  //           <a>
-  //             <NavLink to="/products/checkout">Checkout</NavLink>
-  //           </a>
-  //         </li>
-  //         <li>
-  //           <a>
-  //             <NavLink to="/about">About Us</NavLink>
-  //           </a>
-  //         </li>
-  //       </ul>
-  //     </div>
-  //   </div>
-  // );
-
-
-
-
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-white shadow-lg p-4 sticky top-0 z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6 text-gray-700"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -236,32 +24,43 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-white rounded-lg shadow-lg mt-3 p-2 w-52 z-10"
           >
-            {/* mapping navlinks and showing */}
             {navLinks.map((navlink, index) => (
-              <li key={index}>
-                <a>
-                  <NavLink to={navlink.path}>{navlink.name}</NavLink>
-                </a>
+              <li key={index} className="hover:bg-gray-100 rounded-md">
+                
+                  <NavLink
+                    to={navlink.path}
+                    className="block px-4 py-2 text-gray-700 hover:text-gray-500 transition duration-300 ease-in-out btn btn-ghost"
+                  >
+                    {navlink.name}
+                    <span className="absolute bottom-0 left-0 w-full h-0.5  bg-gray-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></span>
+                  </NavLink>
+               
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex justify-center items-center navbar-center">
-          <img className="size-7" src="../../../../public/favicon.png" alt="" />
-          <a className="text-xl font-bold ml-2">
-            Fitness <span className="text-primary">H</span>ub
+        <div className="flex items-center">
+          <img className="w-10 h-10" src="/favicon.png" alt="FitFlex Logo" />
+          <a className="ml-2 text-2xl font-bold text-gray-800">
+            FitFlex Essentials
           </a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex navbar-end">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu-horizontal space-x-3">
           {navLinks.map((navlink, index) => (
-            <li key={index}>
-              <a>
-                <NavLink to={navlink.path}>{navlink.name}</NavLink>
-              </a>
+            <li key={index} className="relative group ">
+              
+                <NavLink
+                  to={navlink.path}
+                  className="text-gray-700 hover:text-gray-500 text-lg font-medium transition duration-300 ease-in-out btn btn-ghost"
+                >
+                  {navlink.name}
+                  <span className="absolute bottom-0 left-0 w-full h-0.5  bg-gray-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left"></span>
+                </NavLink>
+             
             </li>
           ))}
         </ul>

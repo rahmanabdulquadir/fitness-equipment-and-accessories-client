@@ -16,7 +16,7 @@ const AboutUsIntro = () => {
           </p>
         </div>
       </div>
-      <div className=" z-30 mt-[-170px]">
+      <div className=" z-10 mt-[-170px]">
         <img
           className="rounded-lg "
           src="https://space.xtemos.com/demo/athletex/wp-content/uploads/sites/33/2024/04/athletex-sport-au-top-img-opt.jpg"

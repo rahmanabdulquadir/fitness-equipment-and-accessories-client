@@ -3,17 +3,17 @@ const Team = () => {
     <div className="mt-24 ">
       <div>
         <div className="flex justify-center text-center text-4xl mb-14">
-          <h1 className="font-semibold">Honorable Team</h1>
+          <h1 className="font-semibold mb-10 italic">Honorable Team</h1>
         </div>
-        <div className="w-9/12 mx-auto mb-10">
+        {/* <div className="w-9/12 mx-auto mb-10">
           <hr className="border-t-2 border-gray-300" />
-        </div>
-        <div className="flex justify-evenly">
+        </div> */}
+        <div className="flex justify-evenly ">
           <div className="avatar indicator">
             <span className="indicator-item badge badge-secondary h-12 p-5">
               Mr. Micheal Brook
               <br />
-              CEO of FitFlex
+              CEO of FitFlex Essentials
             </span>
             <div className="h-32 w-32 rounded-lg">
               <img

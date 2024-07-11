@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { RootState } from "../redux/store";
 import { toast } from "sonner";
 import { setToCart } from "../redux/features/cart/cartSlice";
-import { useGetSpecificProductQuery, useUpdateProductMutation } from "../redux/features/product/productApi";
+import { useGetSpecificProductQuery } from "../redux/features/product/productApi";
 import ProgressBar from "../components/ui/global/ProgressBar";
 import ErrorPage from "../components/ui/global/ErrorPage";
 import ProductDetailsCard from "../components/ui/productDetailsPage/ProductDetailsCard";
@@ -17,7 +17,6 @@ const ProductDetailsPage = () => {
   const product = data?.data;
   const dispatch = useAppDispatch();
   const cart = useAppSelector((state: RootState) => state.cart);
-  const [updateProduct] = useUpdateProductMutation();
 
   if (isLoading) {
     return <ProgressBar></ProgressBar>;
@@ -37,7 +36,6 @@ const ProductDetailsPage = () => {
   const handleAddToCart = async () => {
     if (!isProductOutOfStock) {
       dispatch(setToCart(product));
-      await updateProduct({ id: id, stock: product.stock - 1 });
       toast.success("Successfully added cart!");
     }
   };
