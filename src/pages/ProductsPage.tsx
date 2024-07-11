@@ -6,11 +6,12 @@ import Category from "../components/ui/Products/Catergory";
 import ClearFilterButton from "../components/ui/Products/ClearFilterButton";
 import SearchBar from "../components/ui/Products/SearchBar";
 import Sorting from "../components/ui/Products/Sorting";
-import { useGetProductsQuery } from "../redux/api/baseApi";
+// import { useGetProductsQuery } from "../redux/api/baseApi";
 import { clearCategory } from "../redux/features/category/categorySlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { RootState } from "../redux/store";
 import { TProduct } from "../types";
+import { useGetProductsQuery } from "../redux/features/product/productApi";
 
 const ProductsPage = () => {
   const dispatch = useAppDispatch();

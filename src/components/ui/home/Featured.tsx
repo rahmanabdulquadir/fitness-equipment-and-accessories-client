@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useGetProductsQuery } from "../../../redux/api/baseApi";
+// import { useGetProductsQuery } from "../../../redux/api/baseApi";
 import { TProduct } from "../../../types";
 import ProductCard from "../global/ProductCard";
+import { useGetProductsQuery } from "../../../redux/features/product/productApi";
 
 const Featured = () => {
   const {
