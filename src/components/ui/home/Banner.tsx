@@ -32,7 +32,7 @@ const Banner = () => {
               className={`w-full lg:w-10/12 h-auto bg-slate-100  object-cover rounded-lg  transition-transform duration-300  transform hover:scale-110 z-10  ${
                 isVisible ? "opacity-100 animate-pulse " : "opacity-0"
               }`}
-              src="/public/images/18969559-removebg.png" // Replace with your image URL
+              src="https://img.freepik.com/free-vector/set-sport-emblems-labels-badges-logos_1284-46567.jpg?t=st=1720803295~exp=1720806895~hmac=a8d096c60f177c42c37903069eb6c85c7ba61cf25627c1f1cb5d109523cb6dc1&w=740" 
               alt="FitFlex Gym Equipment"
             />
           </div>
