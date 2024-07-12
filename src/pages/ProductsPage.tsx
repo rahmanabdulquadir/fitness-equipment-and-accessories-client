@@ -71,7 +71,7 @@ const ProductsPage = () => {
         </div>
       </div>
       <div className="mb-8">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8 lg:w-11/12 mx-auto">
           <SearchBar></SearchBar>
           {/* category */}
           <Category></Category>

@@ -50,7 +50,7 @@ const CartCard = ({
                       <td className="border px-4 py-2">
                         <div className="flex items-center justify-center">
                           <button
-                            className="btn btn-secondary btn-xs"
+                            className="inline-block px-3 py-1 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
                             onClick={() =>
                               handleUpdateQuantity(item._id, item.quantity - 1)
                             }
@@ -60,7 +60,7 @@ const CartCard = ({
                           </button>
                           <span className="mx-2">{item.quantity}</span>
                           <button
-                            className="btn btn-secondary btn-xs"
+                            className="inline-block px-3 py-1 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
                             onClick={() =>
                               handleUpdateQuantity(item._id, item.quantity + 1)
                             }
@@ -91,7 +91,7 @@ const CartCard = ({
                 Total: ${totalPrice().toFixed(2)}
               </h2>
               <NavLink to="/products/checkout">
-                <button className="btn btn-primary">Proceed to Checkout</button>
+                <button className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105">Proceed to Checkout</button>
               </NavLink>
             </div>
           </div>

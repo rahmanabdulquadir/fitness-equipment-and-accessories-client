@@ -13,7 +13,7 @@ const ProductDetailsCard = ({
 }: TProductDetailsProps) => {
   return (
     <>
-      <div className="card card-side bg-base-100 ">
+      <div className="card card-side bg-base-100 shadow-xl mb-8">
         <figure>
           <img
             className="w-full md:h-96"
@@ -28,7 +28,7 @@ const ProductDetailsCard = ({
           <p className="mb-0">Description: {product.description}</p>
           <div className="card-actions justify-end">
             <button
-              className={`inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 ${
+              className={`btn ${
                 isProductOutOfStock ? "btn-disabled" : "btn-primary"
               }`}
               onClick={handleAddToCart}
@@ -44,3 +44,7 @@ const ProductDetailsCard = ({
 };
 
 export default ProductDetailsCard;
+
+
+
+// inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105
