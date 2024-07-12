@@ -42,7 +42,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          <img className="w-10 h-10" src="/favicon.png" alt="FitFlex Logo" />
+          <img className="w-16 h-10" src="/public/images/18969559-removebg.png" alt="FitFlex Logo" />
           <a className="ml-2 text-2xl font-bold text-gray-800">
             FitFlex Essentials
           </a>

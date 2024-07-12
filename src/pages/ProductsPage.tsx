@@ -84,8 +84,8 @@ const ProductsPage = () => {
           FitFlex Essential Products
         </h2>
         {selectedCategory && (
-          <div className="mb-4">
-            <span className="mr-2">Category: {selectedCategory}</span>
+          <div className="mb-4 lg:pl-16">
+            <span className="lg:text-lg text-gray-500 mr-2">Category: {selectedCategory}</span>
             <button
               className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
               onClick={handleFilterReset}
@@ -109,7 +109,7 @@ const ProductsPage = () => {
                 Price: ${product.price}
               </p>
               <button
-                onClick={() => handleViewDetails(product._id)}
+                onClick={() => handleViewDetails(product?._id as string)}
                 className="inline-block px-5 py-2 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
               >
                 View Details

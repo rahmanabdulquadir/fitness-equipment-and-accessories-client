@@ -30,20 +30,21 @@ const CartPage = () => {
     dispatch(updateCartQuantity({ id, quantity }));
   };
   return (
-    <div>
+    <div className="">
       <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5 mb-10">
         <div className="">
           <h1 className="text-5xl font-bold">C A R T</h1>
           <p className="font-semibold mt-3">Home / Cart</p>
         </div>
       </div>
-
-      <CartCard
-        cart={cart}
-        handleUpdateQuantity={handleUpdateQuantity}
-        handleRemoveFromCart={handleRemoveFromCart}
-        totalPrice={totalPrice}
-      ></CartCard>
+      <div className="lg:w-9/12 mx-auto">
+        <CartCard
+          cart={cart}
+          handleUpdateQuantity={handleUpdateQuantity}
+          handleRemoveFromCart={handleRemoveFromCart}
+          totalPrice={totalPrice}
+        ></CartCard>
+      </div>
     </div>
   );
 };

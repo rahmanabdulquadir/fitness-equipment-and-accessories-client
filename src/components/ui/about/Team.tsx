@@ -8,14 +8,14 @@ const Team = () => {
         {/* <div className="w-9/12 mx-auto mb-10">
           <hr className="border-t-2 border-gray-300" />
         </div> */}
-        <div className="flex justify-evenly ">
+        <div className=" lg:flex lg:justify-evenly grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 items-center">
           <div className="avatar indicator">
             <span className="indicator-item badge badge-secondary h-12 p-5">
               Mr. Micheal Brook
               <br />
               CEO of FitFlex Essentials
             </span>
-            <div className="h-32 w-32 rounded-lg">
+            <div className="h-32 w-9/12 mx-auto rounded-lg">
               <img
                 alt="Tailwind CSS examples"
                 src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"

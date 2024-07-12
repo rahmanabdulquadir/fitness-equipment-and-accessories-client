@@ -1,24 +1,28 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FormEvent, useState } from "react";
 
 const ContactInfo = () => {
+  const [feedback, setFeedback] = useState("");
 
-  const [feedback, setFeedback] = useState('');
-
-  const handleFeedbackChange = (event: FormEvent) => {
+  const handleFeedbackChange = (event: any) => {
     setFeedback(event.target.value);
   };
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     // Handle the form submission logic here
-    alert('Thank you for your feedback!');
-    setFeedback('');
+    alert("Thank you for your feedback!");
+    setFeedback("");
   };
   return (
-    <div className="container mx-auto p-6 bg-gray-100 rounded-lg shadow-lg mt-10">
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">Contact Us</h2>
+    <div className="container lg:w-9/12 mx-auto p-6 bg-gray-100 rounded-lg shadow-lg mt-10">
+      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        Contact Us
+      </h2>
       <p className="text-lg text-center mb-6 text-gray-600">
-        We would love to hear from you! Whether you have a question about our products, need assistance, or just want to provide feedback, feel free to reach out to us.
+        We would love to hear from you! Whether you have a question about our
+        products, need assistance, or just want to provide feedback, feel free
+        to reach out to us.
       </p>
       <div className="flex flex-col md:flex-row justify-around items-center mb-6">
         <div className="mb-6 md:mb-0">
@@ -31,7 +35,11 @@ const ContactInfo = () => {
         </div>
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-semibold text-gray-700">Address</h3>
-          <p className="text-gray-600">123 FitFlex Avenue<br />Fitness City, FC 12345</p>
+          <p className="text-gray-600">
+            123 FitFlex Avenue
+            <br />
+            Fitness City, FC 12345
+          </p>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="text-center">
@@ -46,7 +54,7 @@ const ContactInfo = () => {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+          className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
         >
           Send Us a Message
         </button>
