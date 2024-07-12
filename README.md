@@ -1,30 +1,75 @@
-# React + TypeScript + Vite
+# FitFlex Essentials (Fitness equipment and accessories system server)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+Welcome to the Project repository!.
+fitness application allows users to create, edit, and delete products. Users can filter products by category, minimum/maximum price, and search by product title. Additionally, users can add items to their cart and proceed to checkout directly from the cart.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This README file will guide you through the steps required to set up and run the project on your local computer.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Cart management system
+- Reload alert
 
-- Configure the top-level `parserOptions` property like this:
+## Technology Stack
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- React js
+- Typescript
+- DaisyUI
+- tailwind CSS
+- Redux toolkit & query
+
+## Getting Started
+
+To get started with the project, follow the instructions below:
+
+### Prerequisites
+
+Make sure you have the following software installed on your machine:
+
+- Git
+- Node.js (v20.9.0 recommended)
+- npm or any package installer
+
+### Cloning the Repository
+
+First, clone the repository using the following command:
+
+```
+https://github.com/rahmanabdulquadir/fitness-equipment-and-accessories-client.git
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Installing Dependencies
+
+Open the project file in terminal and run `npm install`
+
+```
+npm install
+
+```
+
+### Setting Up Environment Variables
+
+Add your Required credentials:
+
+```
+imgBB api key
+https://fitness-equipment-and-accessories-server.vercel.app/api/v1
+```
+
+### Running the Project
+
+Once you have set up the environment variables, you can run the project locally.
+
+```
+npm run start:dev
+
+```
+
+### Accessing the Project
+
+```
+http://localhost:5173
+```
